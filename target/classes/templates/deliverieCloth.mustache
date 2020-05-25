@@ -1,0 +1,66 @@
+<html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 2px solid #999;
+        padding: 5px;
+    }
+</style>
+
+<body>
+
+<form method="get" action="deliveries">
+    <input type="submit" value="Вернуться в меню поставок">
+</form>
+
+<div>
+    <form method="post" action="addDeliverieCloth">
+        <input type="number" name="LotNumber" placeholder="Номер лота">
+        <input type="number" step="0.01" name="RollLength" placeholder="Длина рулона">
+        <input type="text" name="Data" placeholder="Дата">
+        <input type="number" name="Cloth_id" placeholder="ID ткани">
+        <input type="number" name="Dealer_id" placeholder="ID поставщика">
+        <input type="number" name="StorageUnit_id" placeholder="ID склада">
+        <button type="submit">Добавить поставку ткани</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="deleteDeliverieCloth">
+        <input type="number" name="id" placeholder="ID поставку ткани">
+        <button type="submit">Удалить поставку ткани</button>
+    </form>
+</div>
+
+<div><b>Список поставок тканей</b></div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Номер лота</th>
+            <th>Длина рулона м.</th>
+            <th>Цена</th>
+            <th>Дата</th>
+            <th>Ткань</th>
+            <th>Поставщик</th>
+            <th>Склад</th>
+        </tr>
+        {{#DeliverieCloths}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{LotNumber}}</td>
+            <td>{{RollLength}}</td>
+            <td>{{Price}}</td>
+            <td>{{Data}}</td>
+            <td>{{Cloth_id.Name}}</td>
+            <td>{{Dealer_id.Name}}</td>
+            <td>{{StorageUnit_id.Town}}</td>
+        </tr>
+        {{/DeliverieCloths}}
+    </table>
+
+</body>
+
+</html>

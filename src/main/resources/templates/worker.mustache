@@ -1,0 +1,52 @@
+<html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 2px solid #999;
+        padding: 5px;
+    }
+</style>
+
+<body>
+<form method="get" action="registrations">
+    <input type="submit" value="Вернуться в меню регистрации">
+</form>
+
+    <div>
+        <form method="post" action="addWorker">
+            <input type="text" name="Name" placeholder="Имя работника">
+            <input type="number" step="0.01" name="workMeter" placeholder="Цена за метр работы">
+            <button type="submit">Добавить работника</button>
+        </form>
+    </div>
+
+     <div>
+        <form method="post" action="deleteWorker">
+            <input type="number" name="id" placeholder="ID работника">
+            <button type="submit">Удалить работника</button>
+        </form>
+    </div>
+
+
+    <div><b>Список работников</b></div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Цена за метр</th>
+        </tr>
+        {{#Workers}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{Name}}</td>
+            <td>{{workMeter}}</td>
+        </tr>
+        {{/Workers}}
+    </table>
+
+</body>
+
+</html>

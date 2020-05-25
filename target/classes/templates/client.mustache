@@ -1,0 +1,61 @@
+<html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 2px solid #999;
+        padding: 5px;
+    }
+</style>
+
+<body>
+<form method="get" action="registrations">
+    <input type="submit" value="Вернуться в меню регистрации">
+</form>
+
+<div>
+    <form method="post" action="addClient">
+        <input type="text" name="SurName" placeholder="Фамилия">
+        <input type="text" name="FirstName" placeholder="Имя">
+        <input type="text" name="Town" placeholder="Город">
+        <input type="text" name="MobileTel" placeholder="Моб.номер">
+        <input type="number" name="NewPostNumber" placeholder="Номер новой почты">
+        <button type="submit">Добавить клиента</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="deleteClient">
+        <input type="number" name="id" placeholder="ID клиента">
+        <button type="submit">Удалить клиента</button>
+    </form>
+</div>
+
+
+    <div><b>Список клиентов</b></div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Город</th>
+            <th>Мобильны телефон</th>
+            <th>Номер новой почты</th>
+        </tr>
+        {{#Clients}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{SurName}}</td>
+            <td>{{FirstName}}</td>
+            <td>{{Town}}</td>
+            <td>{{MobTel}}</td>
+            <td>{{NewPostNumber}}</td>
+        </tr>
+        {{/Clients}}
+    </table>
+
+</body>
+
+</html>

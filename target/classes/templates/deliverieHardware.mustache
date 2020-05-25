@@ -1,0 +1,63 @@
+<html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 2px solid #999;
+        padding: 5px;
+    }
+</style>
+
+<body>
+
+<form method="get" action="deliveries">
+    <input type="submit" value="Вернуться в меню поставок">
+</form>
+
+    <div>
+        <form method="post" action="addDeliverieHardware">
+            <input type="number" name="Number" placeholder="Кол-во шт">
+            <input type="text" name="Data" placeholder="Дата">
+            <input type="number" name="StorageUnit_id" placeholder="ID склада">
+            <input type="number" name="Dealer_id" placeholder="ID поставщика">
+            <input type="number" name="Hardware_id" placeholder="ID фурнитуры">
+            <button type="submit">Добавить поставку фунитуры</button>
+        </form>
+    </div>
+
+    <div>
+        <form method="post" action="deleteDeliverieHardware">
+            <input type="number" name="id" placeholder="ID поставку фурнитуры">
+            <button type="submit">Удалить поставку фурнитуры</button>
+        </form>
+    </div>
+
+    <div><b>Список поставок фурнитуры</b></div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Цена</th>
+            <th>Кол-во</th>
+            <th>Дата</th>
+            <th>Склада</th>
+            <th>Поставщика</th>
+            <th>Фурнитура</th>
+        </tr>
+        {{#DeliverieHarwares}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{Price}}</td>
+            <td>{{Number}}</td>
+            <td>{{Data}}</td>
+            <td>{{StorageUnit_id.Town}}</td>
+            <td>{{Dealer_id.Name}}</td>
+            <td>{{Hardware_id.Name}}</td>
+        </tr>
+        {{/DeliverieHarwares}}
+    </table>
+
+</body>
+
+</html>

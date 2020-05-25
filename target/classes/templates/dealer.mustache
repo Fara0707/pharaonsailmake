@@ -1,0 +1,49 @@
+<html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 2px solid #999;
+        padding: 5px;
+    }
+</style>
+
+<body>
+<form method="get" action="registrations">
+    <input type="submit" value="Вернуться в меню регистрации">
+</form>
+
+<div>
+    <form method="post" action="addDealer">
+        <input type="text" name="Name" placeholder="Имя поставщика">
+        <button type="submit">Добавить поставщика</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="deleteDealer">
+        <input type="number" name="id" placeholder="ID поставщика">
+        <button type="submit">Удалить поставщика</button>
+    </form>
+</div>
+
+<div><b>Список поставщиков</b></div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Имя</th>
+        </tr>
+        {{#Dealers}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{Name}}</td>
+        </tr>
+        {{/Dealers}}
+    </table>
+
+
+</body>
+
+</html>

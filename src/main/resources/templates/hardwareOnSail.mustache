@@ -1,0 +1,65 @@
+<html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 2px solid #999;
+        padding: 5px;
+    }
+</style>
+
+<body>
+<form method="get" action="orders">
+    <input type="submit" value="Вернуться в меню заказов">
+</form>
+
+<div>
+    <form method="post" action="addHardwareOnSail">
+        <input type="number" name="DeliverieHardware_id" placeholder="ID поставки фурнитуры">
+        <input type="text" name="Sail_id" placeholder="ID паруса">
+        <input type="number" name="NumberOfHardware" placeholder="Колв-во фурнитуры">
+        <button type="submit">Добавить фурнитуру на парус</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="deleteHardwareOnSail">
+        <input type="number" name="id" placeholder="ID установки">
+        <button type="submit">Удалить фурнитуру с паруса</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="editHardwareOnSail">
+        <input type="number" name="id" placeholder="ID установки">
+        <input type="number" name="NumberOfHardware" placeholder="Новое кол-во">
+        <button type="submit">Изменить фурнитуру на парусе</button>
+    </form>
+</div>
+
+
+<div><b>Список установок фурнитуры</b></div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>ID поставки фурнитуры</th>
+            <th>ID паруса</th>
+            <th>Кол-во фурнитуры на парусе</th>
+            <th>Цена</th>
+        </tr>
+        {{#HardwareOnSail}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{DeliverieHardware_id.id}}</td>
+            <td>{{Sail_id.id}}</td>
+            <td>{{NumberOfHardware}}</td>
+            <td>{{Price}}</td>
+        </tr>
+        {{/HardwareOnSail}}
+    </table>
+
+</body>
+
+</html>

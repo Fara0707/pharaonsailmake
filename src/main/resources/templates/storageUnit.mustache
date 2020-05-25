@@ -1,0 +1,52 @@
+<html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 2px solid #999;
+        padding: 5px;
+    }
+</style>
+
+<body>
+<form method="get" action="deliveries">
+    <input type="submit" value="Вернуться в меню поставок">
+</form>
+
+<div>
+    <form method="post" action="addStorageUnit">
+        <input type="text" name="Town" placeholder="Город">
+        <input type="text" name="Address" placeholder="Адрес">
+        <button type="submit">Добавить склад</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="deleteStorageUnit">
+        <input type="number" name="id" placeholder="ID склада">
+        <button type="submit">Удалить склад</button>
+    </form>
+</div>
+
+
+<div><b>Список складов</b></div>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Город</th>
+        <th>Адресс</th>
+    </tr>
+    {{#StorageUnits}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{Town}}</td>
+        <td>{{Address}}</td>
+    </tr>
+    {{/StorageUnits}}
+</table>
+
+</body>
+
+</html>

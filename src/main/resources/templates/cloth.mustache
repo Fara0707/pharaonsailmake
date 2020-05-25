@@ -1,0 +1,74 @@
+<html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 2px solid #999;
+        padding: 5px;
+    }
+</style>
+
+<body>
+<form method="get" action="deliveries">
+    <input type="submit" value="Вернуться в меню поставок">
+</form>
+
+<div>
+    <form method="post" action="addCloth">
+        <input type="number" name="Type_id" placeholder="Тип ткани">
+        <input type="text" name="Name" placeholder="Название ткани">
+        <input type="number" name="Width" placeholder="Ширина СМ">
+        <input type="number" step="0.01" name="Weight" placeholder="Вес">
+        <input type="number" step="0.01" name="Price" placeholder="Цена за 1м">
+        <button type="submit">Добавить ткань</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="deleteCloth">
+        <input type="number" name="id" placeholder="ID ткань">
+        <button type="submit">Удалить ткань</button>
+    </form>
+</div>
+
+<div><b>Список типов тканей</b></div>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Название</th>
+    </tr>
+    {{#ClothTypes}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{Type}}</td>
+    </tr>
+    {{/ClothTypes}}
+</table>
+
+<div><b>Список тканей</b></div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Тип</th>
+            <th>Название</th>
+            <th>Ширина</th>
+            <th>Вес</th>
+            <th>Цена</th>
+        </tr>
+        {{#Cloths}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{Type_id.Type}}</td>
+            <td>{{Name}}</td>
+            <td>{{Width}}</td>
+            <td>{{Weight}}</td>
+            <td>{{Price}}</td>
+        </tr>
+        {{/Cloths}}
+    </table>
+
+</body>
+
+</html>

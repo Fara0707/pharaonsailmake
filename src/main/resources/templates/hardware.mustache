@@ -1,0 +1,75 @@
+<html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 2px solid #999;
+        padding: 5px;
+    }
+</style>
+
+<body>
+<form method="get" action="deliveries">
+    <input type="submit" value="Вернуться в меню поставок">
+</form>
+
+<div>
+    <form method="post" action="addHardware">
+        <input type="text" name="Name" placeholder="Название фурнитуры">
+        <input type="number" name="Type_id" placeholder="ID тип фурнитуры">
+        <input type="number" step="0.01" name="Price" placeholder="Цена за 1 шт">
+        <button type="submit">Добавить фурнитуру</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="deleteHardware">
+        <input type="number" name="id" placeholder="ID фурнитуру">
+        <button type="submit">Удалить фурнитуру</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="addHardwareType">
+        <input type="text" name="Type" placeholder="Название типа">
+        <button type="submit">Добавить тип фурнитуры</button>
+    </form>
+</div>
+
+<div><b>Список типов фурнитуры</b></div>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Название</th>
+    </tr>
+    {{#HardwareTypes}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{Type}}</td>
+    </tr>
+    {{/HardwareTypes}}
+</table>
+
+<div><b>Список фурнитуры</b></div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Названеи</th>
+            <th>Тип</th>
+            <th>Цена</th>
+        </tr>
+        {{#Hardwares}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{Name}}</td>
+            <td>{{Type_id.Type}}</td>
+            <td>{{Price}}</td>
+        </tr>
+        {{/Hardwares}}
+    </table>
+
+</body>
+
+</html>
