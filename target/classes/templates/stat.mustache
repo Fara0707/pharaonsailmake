@@ -1,0 +1,38 @@
+<html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 2px solid #999;
+        padding: 5px;
+    }
+</style>
+
+<body>
+<form method="get" action="menuMain">
+    <input type="submit" value="Вернуться в главное меню">
+</form>
+
+    <div><b>Статистика</b></div>
+    <table>
+        <tr>
+            <th>Заработали за все время</th>
+            <th>Потратили на фурнитуру</th>
+            <th>Потраили на ткани</th>
+            <th>Использовали ткани</th>
+        </tr>
+        {{#Stat}}
+        <tr>
+            <td>{{allCostSail}}</td>
+            <td>{{allBuyHardware}}</td>
+            <td>{{allBuyCloth}}</td>
+            <td>{{howClothUsed}}</td>
+        </tr>
+        {{/Stat}}
+    </table>
+
+</body>
+
+</html>
