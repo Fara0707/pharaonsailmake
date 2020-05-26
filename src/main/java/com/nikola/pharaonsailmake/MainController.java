@@ -73,6 +73,19 @@ public class MainController {
     ///////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////
 
+    @GetMapping("stat")
+    public String stat(Map<String, Object> model) {
+
+        Stat stat = new Stat(sailRepo.allCostSail(), deliverieHardwareRepo.allBuyHardware(), deliverieClothRepo.allBuyCloth(),
+                sailRepo.howClothUsed());
+        model.put("Stat", stat);
+
+        return "stat";
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////
+
     @GetMapping("worker")
     public String worker(Map<String, Object> model) {
 
@@ -369,7 +382,8 @@ public class MainController {
 
         if (Data != null && Number != null && StorageUnit_id != null && storageUnitRepo.existsById(StorageUnit_id) &&
                 Dealer_id != null && dealerRepo.existsById(Dealer_id) && Hardware_id != null && hardwareRepo.existsById(Hardware_id)) {
-            DeliverieHardware deliverieHardware = new DeliverieHardware(Number * hardwareRepo.findById(Hardware_id).orElse(new Hardware()).getPrice(),
+            DeliverieHardware deliverieHardware /*пасхалка, специально для Натальи Романовны запросы на SQL, а не через встроенный интерпритотор)))*/
+                    = new DeliverieHardware(Number * hardwareRepo.findById(Hardware_id).orElse(new Hardware()).getPrice(),
                     Data, Number, storageUnitRepo.findById(StorageUnit_id).orElse(new StorageUnit()),
                     dealerRepo.findById(Dealer_id).orElse(new Dealer()), hardwareRepo.findById(Hardware_id).orElse(new Hardware()));
             deliverieHardwareRepo.save(deliverieHardware);
