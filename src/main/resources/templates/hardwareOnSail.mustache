@@ -1,46 +1,56 @@
-<html>
-<style>
-    table {
-        border-collapse: collapse;
-    }
+<html lang="en">
 
-    table, td, th {
-        border: 2px solid #999;
-        padding: 5px;
-    }
-</style>
+<head>
 
-<body>
-<form method="get" action="orders">
-    <input type="submit" value="Вернуться в меню заказов">
-</form>
+    <!-- Character set configuration -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport configuration, scaling options -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- MS tile icons -->
+    <meta name="msapplication-TileColor" content="#00C264">
+    <link rel="shortcut icon" href="/images/logoBlueRound.png" type="image/png">
+
+    <link rel="icon" type="image/png" href="/images/logoBlueRound.png" sizes="96x96">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/css/stylesForWorkers.css">
+
+    <!-- Site title -->
+    <title>HardwareOnSail</title>
+
+</head>
+
+<body class="button-container">
+<a href="/orders">Вернуться в меню заказов</a>
 
 <div>
     <form method="post" action="addHardwareOnSail">
-        <input type="number" name="DeliverieHardware_id" placeholder="ID поставки фурнитуры">
-        <input type="text" name="Sail_id" placeholder="ID паруса">
-        <input type="number" name="NumberOfHardware" placeholder="Колв-во фурнитуры">
+        <input class="edit bk" type="number" name="DeliverieHardware_id" placeholder="ID поставки фурнитуры">
+        <input class="edit bk" type="text" name="Sail_id" placeholder="ID паруса">
+        <input class="edit bk" type="number" name="NumberOfHardware" placeholder="Колв-во фурнитуры">
         <button type="submit">Добавить фурнитуру на парус</button>
     </form>
 </div>
 
 <div>
     <form method="post" action="deleteHardwareOnSail">
-        <input type="number" name="id" placeholder="ID установки">
+        <input class="edit bk" type="number" name="id" placeholder="ID установки">
         <button type="submit">Удалить фурнитуру с паруса</button>
     </form>
 </div>
 
 <div>
     <form method="post" action="editHardwareOnSail">
-        <input type="number" name="id" placeholder="ID установки">
-        <input type="number" name="NumberOfHardware" placeholder="Новое кол-во">
+        <input class="edit bk" type="number" name="id" placeholder="ID установки">
+        <input class="edit bk" type="number" name="NumberOfHardware" placeholder="Новое кол-во">
         <button type="submit">Изменить фурнитуру на парусе</button>
     </form>
 </div>
 
 
-<div><b>Список установок фурнитуры</b></div>
+<div><h1><b>Список установок фурнитуры</b></h1></div>
     <table>
         <tr>
             <th>ID</th>

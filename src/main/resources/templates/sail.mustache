@@ -1,47 +1,55 @@
 <html>
-<style>
-    table {
-        border-collapse: collapse;
-    }
+<head>
 
-    table, td, th {
-        border: 2px solid #999;
-        padding: 5px;
-    }
-</style>
+    <!-- Character set configuration -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport configuration, scaling options -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- MS tile icons -->
+    <meta name="msapplication-TileColor" content="#00C264">
+    <link rel="shortcut icon" href="/images/logoBlueRound.png" type="image/png">
+
+    <link rel="icon" type="image/png" href="/images/logoBlueRound.png" sizes="96x96">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/css/stylesForWorkers.css">
+
+    <!-- Site title -->
+    <title>Cloth</title>
+
+</head>
 
 <body>
-<form method="get" action="orders">
-    <input type="submit" value="Вернуться в меню заказов">
-</form>
-
-<div>
+<div class="button-container">
+    <a href="/orders">Вернуться в меню заказов</a>
+    
     <form method="post" action="addSail">
-        <input type="number" name="SailType_id" placeholder="ID тип паруса">
-        <input type="number" name="Cut_id" placeholder="Расскрой">
-        <input type="number" step="0.01" name="LengthLeech" placeholder="Длина задней шкаторины">
-        <input type="number" step="0.01" name="LengthLuff" placeholder="Длина передней шкаторины">
-        <input type="number" step="0.01" name="LengthFoot" placeholder="Длина нижней шкаторины">
-        <input type="number" step="0.01" name="SickleLeech" placeholder="Серп задней шкаторины">
-        <input type="number" step="0.01" name="SickleLuff" placeholder="Серп передней шкаторины">
-        <input type="number" step="0.01" name="SickleFoot" placeholder="Серп нижней шкаторины">
-        <input type="number" step="0.01" name="Seam" placeholder="Закладка">
-        <input type="number" step="0.01" name="ElapsedLength" placeholder="Погонных метров ткани потрачено">
-        <input type="number" name="Client_id" placeholder="ID клиента">
-        <input type="number" name="Worker_id" placeholder="ID работника">
-        <input type="number" name="DeliverieCloth_id" placeholder="ID поставки ткани">
+        <input class="edit bk" type="number" name="SailType_id" placeholder="ID тип паруса">
+        <input class="edit bk" type="number" name="Cut_id" placeholder="Расскрой">
+        <input class="edit bk" type="number" step="0.01" name="LengthLeech" placeholder="Длина задней шкаторины">
+        <input class="edit bk" type="number" step="0.01" name="LengthLuff" placeholder="Длина передней шкаторины">
+        <input class="edit bk" type="number" step="0.01" name="LengthFoot" placeholder="Длина нижней шкаторины">
+        <input class="edit bk" type="number" step="0.01" name="SickleLeech" placeholder="Серп задней шкаторины">
+        <input class="edit bk" type="number" step="0.01" name="SickleLuff" placeholder="Серп передней шкаторины">
+        <input class="edit bk" type="number" step="0.01" name="SickleFoot" placeholder="Серп нижней шкаторины">
+        <input class="edit bk" type="number" step="0.01" name="Seam" placeholder="Закладка">
+        <input class="edit bk" type="number" step="0.01" name="ElapsedLength" placeholder="Погонных метров ткани потрачено">
+        <input class="edit bk" type="number" name="Client_id" placeholder="ID клиента">
+        <input class="edit bk" type="number" name="Worker_id" placeholder="ID работника">
+        <input class="edit bk" type="number" name="DeliverieCloth_id" placeholder="ID поставки ткани">
         <button type="submit">Добавить парус</button>
     </form>
 </div>
 
 <div>
     <form method="post" action="deleteSail">
-        <input type="number" name="id" placeholder="ID паруса">
+        <input class="edit bk" type="number" name="id" placeholder="ID паруса">
         <button type="submit">Удалить парус</button>
     </form>
 </div>
-
-<div><b>Список типов парусов</b></div>
+<div><h1><b>Список типов парусов</b></h1></div>
 <table>
     <tr>
         <th>ID</th>
@@ -54,7 +62,7 @@
     </tr>
     {{/SailTypes}}
 </table>
-<div><b>Список покроев</b></div>
+<div><h1><b>Список покроев</b></h1></div>
 <table>
     <tr>
         <th>ID</th>
@@ -67,8 +75,8 @@
     </tr>
     {{/SailCuts}}
 </table>
+<div><h1><b>Список парусов</b></h1></div>
 
-<div><b>Список парусов</b></div>
     <table>
         <tr>
             <th>ID</th>

@@ -1,26 +1,35 @@
-<html>
+<html lang="en">
 
-<body>
+<head>
+
+    <!-- Character set configuration -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport configuration, scaling options -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- MS tile icons -->
+    <meta name="msapplication-TileColor" content="#00C264">
+    <link rel="shortcut icon" href="/images/logoBlueRound.png" type="image/png">
+
+    <link rel="icon" type="image/png" href="/images/logoBlueRound.png" sizes="96x96">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/css/stylesForWorkers.css">
+
+    <!-- Site title -->
+    <title>MenuMain</title>
+
+</head>
+<body class="button-container">
 
 <div>
-    <div><b>Главное меню</b></div>
+    <div><h1><b>Главное меню</b></h1></div>
 
-    <form method="get" action="registrations">
-        <input type="submit" value="Регистрация пользователей">
-    </form>
-
-    <form method="get" action="orders">
-        <input type="submit" value="Работа с заказами">
-    </form>
-
-    <form method="get" action="deliveries">
-        <input type="submit" value="Работа с поставками">
-    </form>
-
-    <form method="get" action="stat">
-        <input type="submit" value="Формирование статистики">
-    </form>
-
+    <a href="/registrations">Регистрация пользователей</a>
+    <a href="/orders">Работа с заказамив</a>
+    <a href="/deliveries">Работа с поставками</a>
+    <a href="/stat">Формирование статистики</a>
 
 </div>
 

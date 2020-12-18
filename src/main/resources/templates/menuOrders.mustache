@@ -1,22 +1,34 @@
-<html>
+<html lang="en">
 
-<body>
+<head>
 
+    <!-- Character set configuration -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport configuration, scaling options -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- MS tile icons -->
+    <meta name="msapplication-TileColor" content="#00C264">
+    <link rel="shortcut icon" href="/images/logoBlueRound.png" type="image/png">
+
+    <link rel="icon" type="image/png" href="/images/logoBlueRound.png" sizes="96x96">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/css/stylesForWorkers.css">
+
+    <!-- Site title -->
+    <title>MenuOrders</title>
+
+</head>
+
+<body class="button-container">
 <div>
-    <form method="get" action="menuMain">
-        <input type="submit" value="Вернуться в главное меню">
-    </form>
+    <a href="/menuMain">Вернуться в главное меню</a>
 
-    <div><b>Меню заказов</b></div>
-
-    <form method="get" action="sail">
-    <input type="submit" value="Работа с парусами">
-    </form>
-
-    <form method="get" action="hardwareOnSail">
-        <input type="submit" value="Установка фурнитруы">
-    </form>
-
+    <div><h1><b>Меню заказов</b></h1></div>
+    <a href="/sail">Работа с парусами</a>
+    <a href="/hardwareOnSail">Установка фурнитруы</a>
 </div>
 
 </body>

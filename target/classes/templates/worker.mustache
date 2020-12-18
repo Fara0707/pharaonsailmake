@@ -1,37 +1,47 @@
-<html>
-<style>
-    table {
-        border-collapse: collapse;
-    }
+<html lang="en">
 
-    table, td, th {
-        border: 2px solid #999;
-        padding: 5px;
-    }
-</style>
+<head>
 
-<body>
-<form method="get" action="registrations">
-    <input type="submit" value="Вернуться в меню регистрации">
-</form>
+    <!-- Character set configuration -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport configuration, scaling options -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- MS tile icons -->
+    <meta name="msapplication-TileColor" content="#00C264">
+    <link rel="shortcut icon" href="/images/logoBlueRound.png" type="image/png">
+
+    <link rel="icon" type="image/png" href="/images/logoBlueRound.png" sizes="96x96">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/css/stylesForWorkers.css">
+
+    <!-- Site title -->
+    <title>Worker</title>
+
+</head>
+
+<body class="button-container">
+<a href="/registrations">Вернуться в меню регистрации</a>
 
     <div>
         <form method="post" action="addWorker">
-            <input type="text" name="Name" placeholder="Имя работника">
-            <input type="number" step="0.01" name="workMeter" placeholder="Цена за метр работы">
+            <input class="edit bk" type="text" name="Name" placeholder="Имя работника">
+            <input class="edit bk" type="number" step="0.01" name="workMeter" placeholder="Цена за метр работы">
             <button type="submit">Добавить работника</button>
         </form>
     </div>
 
      <div>
         <form method="post" action="deleteWorker">
-            <input type="number" name="id" placeholder="ID работника">
+            <input class="edit bk" type="number" name="id" placeholder="ID работника">
             <button type="submit">Удалить работника</button>
         </form>
     </div>
 
 
-    <div><b>Список работников</b></div>
+<div><h1><b>Список работников</b></h1></div>
     <table>
         <tr>
             <th>ID</th>

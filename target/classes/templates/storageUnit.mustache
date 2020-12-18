@@ -1,37 +1,47 @@
-<html>
-<style>
-    table {
-        border-collapse: collapse;
-    }
+<html lang="en">
 
-    table, td, th {
-        border: 2px solid #999;
-        padding: 5px;
-    }
-</style>
+<head>
 
-<body>
-<form method="get" action="deliveries">
-    <input type="submit" value="Вернуться в меню поставок">
-</form>
+    <!-- Character set configuration -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport configuration, scaling options -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- MS tile icons -->
+    <meta name="msapplication-TileColor" content="#00C264">
+    <link rel="shortcut icon" href="/images/logoBlueRound.png" type="image/png">
+
+    <link rel="icon" type="image/png" href="/images/logoBlueRound.png" sizes="96x96">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/css/stylesForWorkers.css">
+
+    <!-- Site title -->
+    <title>StorageUnit</title>
+
+</head>
+
+<body class="button-container">
+<a href="/deliveries">Вернуться в меню поставок</a>
 
 <div>
     <form method="post" action="addStorageUnit">
-        <input type="text" name="Town" placeholder="Город">
-        <input type="text" name="Address" placeholder="Адрес">
+        <input class="edit bk" type="text" name="Town" placeholder="Город">
+        <input class="edit bk" type="text" name="Address" placeholder="Адрес">
         <button type="submit">Добавить склад</button>
     </form>
 </div>
 
 <div>
     <form method="post" action="deleteStorageUnit">
-        <input type="number" name="id" placeholder="ID склада">
+        <input class="edit bk" type="number" name="id" placeholder="ID склада">
         <button type="submit">Удалить склад</button>
     </form>
 </div>
 
 
-<div><b>Список складов</b></div>
+<div><h1><b>Список складов</b></h1></div>
 <table>
     <tr>
         <th>ID</th>

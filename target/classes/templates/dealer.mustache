@@ -1,35 +1,45 @@
-<html>
-<style>
-    table {
-        border-collapse: collapse;
-    }
+<html lang="en">
 
-    table, td, th {
-        border: 2px solid #999;
-        padding: 5px;
-    }
-</style>
+<head>
 
-<body>
-<form method="get" action="registrations">
-    <input type="submit" value="Вернуться в меню регистрации">
-</form>
+    <!-- Character set configuration -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport configuration, scaling options -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- MS tile icons -->
+    <meta name="msapplication-TileColor" content="#00C264">
+    <link rel="shortcut icon" href="/images/logoBlueRound.png" type="image/png">
+
+    <link rel="icon" type="image/png" href="/images/logoBlueRound.png" sizes="96x96">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/css/stylesForWorkers.css">
+
+    <!-- Site title -->
+    <title>Dealer</title>
+
+</head>
+
+<body class="button-container">
+<a href="/registrations">Вернуться в меню регистрации</a>
 
 <div>
     <form method="post" action="addDealer">
-        <input type="text" name="Name" placeholder="Имя поставщика">
+        <input class="edit bk" type="text" name="Name" placeholder="Имя поставщика">
         <button type="submit">Добавить поставщика</button>
     </form>
 </div>
 
 <div>
     <form method="post" action="deleteDealer">
-        <input type="number" name="id" placeholder="ID поставщика">
+        <input class="edit bk" type="number" name="id" placeholder="ID поставщика">
         <button type="submit">Удалить поставщика</button>
     </form>
 </div>
 
-<div><b>Список поставщиков</b></div>
+<div><h1><b>Список поставщиков</b></h1></div>
     <table>
         <tr>
             <th>ID</th>
