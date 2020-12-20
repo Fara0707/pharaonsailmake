@@ -15,7 +15,8 @@
     <link rel="icon" type="image/png" href="/images/logoBlueRound.png" sizes="96x96">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/css/stylesForWorkers.css">
+        <link rel="stylesheet" href="styles/css/stylesForWorkers.css">
+    <link rel="stylesheet" href="styles/css/nav.css">
 
     <!-- Site title -->
     <title>DeliverieCloth</title>
@@ -23,6 +24,63 @@
 </head>
 
 <body class="button-container">
+<div>
+<header>
+    <nav role="navigation">
+        <ul>
+            <li>
+                <a href="/registrations">
+                    <div>
+                        Регистрация пользователей
+                    </div>
+                </a><div>
+                <ul>
+                    <li><a href="/client">Клиенты</a></li>
+                    <li><a href="/worker">Сотрудники</a></li>
+                    <li><a href="/dealer">Поставщики</a></li>
+                </ul>
+            </div>
+            </li>
+            <li>
+                <a href="/orders">
+                    <div>
+                        Работа с заказамив
+                    </div>
+                </a><div>
+                <ul>
+                    <li><a href="/sail">Паруса</a></li>
+                    <li><a href="/hardwareOnSail">Установка фурнитуры</a></li>
+                </ul>
+            </div>
+            </li>
+            <li>
+                <a href="/deliveries">
+                    <div>
+                        Работа с поставками
+                    </div>
+                </a><div>
+                <ul>
+                    <li><a href="/cloth">Ткани</a></li>
+                    <li><a href="/deliverieCloth">Поставками ткани</a></li>
+                    <li><a href="/hardware">Фурнитура</a></li>
+                    <li><a href="/deliverieHardware">Поставками фурнитуры</a></li>
+                    <li><a href="/storageUnit">Склады</a></li>
+                </ul>
+            </div>
+            </li>
+            <li>
+                <a href="/stat">
+                    <div>
+                        Формирование статистики
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+</div>
+<div class="underNav button-container">
+
 <a href="/deliveries">Вернуться в меню поставок</a>
 
 <div>
@@ -74,7 +132,7 @@
         </tr>
         {{/DeliverieCloths}}
     </table>
-
+</div>
 </body>
 
 </html>

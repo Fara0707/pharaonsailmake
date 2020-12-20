@@ -15,22 +15,78 @@
     <link rel="icon" type="image/png" href="/images/logoBlueRound.png" sizes="96x96">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/css/stylesForWorkers.css">
+            <link rel="stylesheet" href="styles/css/stylesForWorkers.css">
+    <link rel="stylesheet" href="styles/css/nav.css">
+
 
     <!-- Site title -->
     <title>MenuMain</title>
 
 </head>
-<body class="button-container">
+<body>
 
 <div>
+<header>
+    <nav role="navigation">
+        <ul>
+            <li>
+                <a href="/registrations">
+                    <div>
+                        Регистрация пользователей
+                    </div>
+                </a><div>
+                <ul>
+                    <li><a href="/client">Клиенты</a></li>
+                    <li><a href="/worker">Сотрудники</a></li>
+                    <li><a href="/dealer">Поставщики</a></li>
+                </ul>
+            </div>
+            </li>
+            <li>
+                <a href="/orders">
+                    <div>
+                        Работа с заказамив
+                    </div>
+                </a><div>
+                <ul>
+                    <li><a href="/sail">Паруса</a></li>
+                    <li><a href="/hardwareOnSail">Установка фурнитуры</a></li>
+                </ul>
+            </div>
+            </li>
+            <li>
+                <a href="/deliveries">
+                    <div>
+                        Работа с поставками
+                    </div>
+                </a><div>
+                <ul>
+                    <li><a href="/cloth">Ткани</a></li>
+                    <li><a href="/deliverieCloth">Поставками ткани</a></li>
+                    <li><a href="/hardware">Фурнитура</a></li>
+                    <li><a href="/deliverieHardware">Поставками фурнитуры</a></li>
+                    <li><a href="/storageUnit">Склады</a></li>
+                </ul>
+            </div>
+            </li>
+            <li>
+                <a href="/stat">
+                    <div>
+                        Формирование статистики
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+</div>
+
+<div class="underNav button-container">
     <div><h1><b>Главное меню</b></h1></div>
-
-    <a href="/registrations">Регистрация пользователей</a>
-    <a href="/orders">Работа с заказамив</a>
-    <a href="/deliveries">Работа с поставками</a>
-    <a href="/stat">Формирование статистики</a>
-
+    <a href="/registrations">Регистрация пользователей</a><br>
+    <a href="/orders">Работа с заказамив</a><br>
+    <a href="/deliveries">Работа с поставками</a><br>
+    <a href="/stat">Формирование статистики</a><br>
 </div>
 
 </body>

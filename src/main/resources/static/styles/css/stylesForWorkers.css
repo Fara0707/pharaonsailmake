@@ -4,7 +4,7 @@
     border: 2px solid #f1c40f;
     color: #000000;
     padding: 3px 10px;
-    font-size: 12px;
+    font-size: 14px;
     background: #FFF;
     margin: 10px 20px;
 }
@@ -44,34 +44,8 @@ h1 {
     margin: 10px 20px;
 }
 
-/*table {*/
-/*    margin: 10px 20px;*/
-/*    font-size: 14px;*/
-/*    background: #9bd8da;*/
-/*    !*background: #0096f9;*!*/
-/*    !*max-width: 70%;*!*/
-/*    !*width: 70%;*!*/
-/*    border-collapse: collapse;*/
-/*    text-align: left;*/
-/*}*/
-/*th {*/
-/*    background-color: #7497bb;*/
-/*    !*font-weight: normal;*!*/
-/*    color: #901f29;*/
-/*    border-bottom: 5px solid  #567390;*/
-/*    padding: 10px 8px;*/
-/*    font-weight: bold;*/
-/*}*/
-/*td {*/
-/*    color: #ffbc1e;*/
-/*    padding: 9px 8px;*/
-/*    transition: .3s linear;*/
-/*    border-bottom: 3px solid #567390;*/
-/*}*/
-/*tr:hover td {color: #ff4600;}*/
-
 table {
-    font-size: 13px;
+    font-size: 14px;
     border-radius: 10px;
     border-spacing: 0;
     text-align: center;
@@ -111,3 +85,62 @@ tr:last-child td:last-child {
 tr td:last-child {
     border-right: none;
 }
+
+.underNav{
+    padding-top: 120px;
+}
+
+/*ul {*/
+/*    display: block;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    list-style: none;*/
+/*}*/
+/*ul:after {*/
+/*    display: block;*/
+/*    content: ' ';*/
+/*    clear: both;*/
+/*    float: none;*/
+/*}*/
+/*ul.menu > li {*/
+/*    float: left;*/
+/*    position: relative;*/
+/*}*/
+/*ul.menu > li > a {*/
+/*    display: block;*/
+/*    padding: 10px;*/
+/*    text-decoration: none;*/
+/*}*/
+/*ul.menu > li > a:hover {*/
+/*    background-color:  #567390;*/
+/*}*/
+/*ul.submenu {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    width: 120px;*/
+/*    top: 37px;*/
+/*    left: 0;*/
+/*    background-color: #2e5775;*/
+/*    !*border: 1px solid red;*!*/
+/*}*/
+/*ul.submenu > li {*/
+/*    display: block;*/
+/*}*/
+/*ul.submenu > li > a {*/
+/*    display: block;*/
+/*    padding: 10px;*/
+/*    !*background-color:  #567390;*!*/
+/*    text-decoration: none;*/
+/*}*/
+/*ul.submenu > li > a:hover {*/
+/*    text-decoration: underline;*/
+/*}*/
+
+/*ul.menu > li:hover > ul.submenu {*/
+/*    display: block;*/
+/*}*/
+
+/*.menu {*/
+/*    background-color: #4d6488;*/
+/*    width: 100%;*/
+/*}*/
