@@ -1,4 +1,4 @@
-package com.nikola.pharaonsailmake.controllers;
+package com.nikola.pharaonsailmake.PDF;
 
 import com.lowagie.text.Document;
 import com.lowagie.text.Element;
